@@ -31,7 +31,7 @@ flutter:
 
   # ------- LOCAL ASSETS ------- #
   assets:
-    - assets/icons/
+    - assets/icons/Search.svg
     - assets/images/
     - assets/logos/
 

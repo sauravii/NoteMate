@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note_mate/components/my_button.dart';
 import 'package:note_mate/components/my_passwordfield.dart';
 import 'package:note_mate/components/my_textfield.dart';
+import 'package:note_mate/layout/home.dart';
 import 'package:note_mate/utils/constants/colors.dart';
 import 'package:note_mate/utils/theme/custom_themes/text_themes.dart';
 
@@ -100,7 +101,15 @@ class LoginScreen extends StatelessWidget {
 
             // Button
             MyButton(
-              onTap: loginUser,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MyHomePage(
+                            title: 'NoteMate',
+                          )),
+                );
+              },
               title: 'Login',
             ),
 

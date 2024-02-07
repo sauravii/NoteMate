@@ -1,7 +1,10 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:note_mate/components/my_button.dart';
 import 'package:note_mate/components/my_passwordfield.dart';
 import 'package:note_mate/components/my_textfield.dart';
+import 'package:note_mate/layout/home.dart';
 import 'package:note_mate/utils/constants/colors.dart';
 import 'package:note_mate/utils/theme/custom_themes/text_themes.dart';
 
@@ -12,9 +15,6 @@ class RegisterScreen extends StatelessWidget {
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
-  // login user method
-  void loginUser() {}
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +121,15 @@ class RegisterScreen extends StatelessWidget {
 
             // Button
             MyButton(
-              onTap: loginUser,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MyHomePage(
+                            title: 'NoteMate',
+                          )),
+                );
+              },
               title: 'Register',
             ),
 
