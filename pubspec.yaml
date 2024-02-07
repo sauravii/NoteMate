@@ -12,7 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # ------- ICONS ------- #
+  # ------- Util Packages ------- #
+  flutter_native_splash: ^2.3.10
+
+  # ------- Icons ------- #
   cupertino_icons: ^1.0.2
 
 # ------- PACKAGES ENDS ------- #
