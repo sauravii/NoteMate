@@ -5,10 +5,11 @@ import 'package:note_mate/components/my_textfield.dart';
 import 'package:note_mate/utils/constants/colors.dart';
 import 'package:note_mate/utils/theme/custom_themes/text_themes.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  RegisterScreen({super.key});
 
   // text editing controller
+  final usernameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -22,7 +23,7 @@ class LoginScreen extends StatelessWidget {
       child: Padding(
         // ignore: prefer_const_constructors
         padding: EdgeInsets.only(
-          top: 150,
+          top: 120,
           left: 35,
           right: 35,
           bottom: 100,
@@ -34,7 +35,7 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Login',
+                  'Register',
                   style: NoteMateTextTheme.lightTextTheme.headlineLarge,
                 )
               ],
@@ -42,6 +43,26 @@ class LoginScreen extends StatelessWidget {
 
             SizedBox(
               height: 30,
+            ),
+
+            // Username Form
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Username',
+                  style: NoteMateTextTheme.lightTextTheme.titleMedium,
+                ),
+                MyTextField(
+                  controller: usernameController,
+                  hintText: 'Username',
+                  obsecureText: false,
+                )
+              ],
+            ),
+
+            SizedBox(
+              height: 15,
             ),
 
             // Email Form
@@ -101,7 +122,7 @@ class LoginScreen extends StatelessWidget {
             // Button
             MyButton(
               onTap: loginUser,
-              title: 'Login',
+              title: 'Register',
             ),
 
             SizedBox(
@@ -113,7 +134,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Don\'t have an account?',
+                  'Already have an account?',
                   style: TextStyle(
                       color: NoteMateColors.textPrimary,
                       fontSize: 12,
@@ -123,7 +144,7 @@ class LoginScreen extends StatelessWidget {
                   width: 4,
                 ),
                 Text(
-                  'Sign up here',
+                  'Sign in here',
                   style: TextStyle(
                       color: NoteMateColors.primary,
                       fontSize: 12,

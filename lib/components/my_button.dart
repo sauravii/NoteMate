@@ -3,8 +3,9 @@ import 'package:note_mate/utils/constants/colors.dart';
 
 class MyButton extends StatelessWidget {
   final Function()? onTap;
+  final String title;
 
-  const MyButton({super.key, required this.onTap});
+  const MyButton({super.key, required this.onTap, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class MyButton extends StatelessWidget {
           ),
           child: Center(
               child: Text(
-            'Login',
+            title,
             style: TextStyle(
                 color: NoteMateColors.white,
                 fontSize: 14,

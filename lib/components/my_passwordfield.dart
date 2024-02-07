@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:note_mate/utils/constants/colors.dart';
 import 'package:note_mate/utils/theme/custom_themes/text_themes.dart';
 
-class MyTextField extends StatelessWidget {
+class MyPasswordField extends StatelessWidget {
   final controller;
   final String hintText;
   final bool obsecureText;
 
-  const MyTextField({
-    super.key,
-    required this.controller,
-    required this.hintText,
-    required this.obsecureText,
-  });
+  const MyPasswordField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      required this.obsecureText});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +29,10 @@ class MyTextField extends StatelessWidget {
           filled: true,
           hintText: hintText,
           hintStyle: NoteMateTextTheme.lightTextTheme.bodySmall,
+          suffixIcon: Icon(
+            Icons.remove_red_eye_outlined,
+            size: 18,
+          ),
         ),
       ),
     );
