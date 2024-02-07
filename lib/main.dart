@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_mate/layout/login.dart';
 import 'package:note_mate/layout/register.dart';
+import 'package:note_mate/layout/splash.dart';
 import 'package:note_mate/utils/theme/theme.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: NoteMateTheme.lightTheme,
-      home: RegisterScreen(),
+      home: SplashScreen(),
     );
   }
 }
