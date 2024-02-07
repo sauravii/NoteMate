@@ -19,7 +19,7 @@ class NoteMateTextTheme {
         color: NoteMateColors.textPrimary),
     titleMedium: const TextStyle().copyWith(
         fontSize: 14.0,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w600,
         color: NoteMateColors.textSecondary),
     bodyMedium: const TextStyle().copyWith(
         fontSize: 14.0,
@@ -27,7 +27,7 @@ class NoteMateTextTheme {
         color: NoteMateColors.textPrimary),
     bodySmall: const TextStyle().copyWith(
         fontSize: 12.0,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.w500,
         color: NoteMateColors.textSecondary),
     labelLarge: const TextStyle().copyWith(
         fontSize: 14.0,
