@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_mate/utils/theme/theme.dart';
+import 'package:note_mate/layout/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: NoteMateTheme.lightTheme,
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'NoteMate'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
